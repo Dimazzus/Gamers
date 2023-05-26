@@ -31,17 +31,17 @@ public class Game {
         if (player2 == null) {
             throw new NewRegisteredException(playerName2);
         }
-        if(player1.getStrength() > player2.getStrength()) {
+        if (player1.getStrength() > player2.getStrength()) {
             return 1;
 
         }
-        if(player1.getStrength() < player2.getStrength()) {
+        if (player1.getStrength() < player2.getStrength()) {
             return 2;
 
         }
-            return 0;
+        return 0;
 
-        }
+    }
 
-        }
+}
 

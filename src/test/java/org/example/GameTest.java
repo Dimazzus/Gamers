@@ -14,11 +14,12 @@ public class GameTest {
         game.register(sasha);
         game.register(masha);
 
-        int expected =1;
+        int expected = 1;
         int actual = game.round("Саша", "Маша");
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void secondPlayerWinTest() {
         Game game = new Game();
@@ -27,11 +28,12 @@ public class GameTest {
         game.register(sasha);
         game.register(masha);
 
-        int expected =2;
+        int expected = 2;
         int actual = game.round("Саша", "Маша");
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void equalStrengthTest() {
         Game game = new Game();
@@ -40,11 +42,12 @@ public class GameTest {
         game.register(sasha);
         game.register(masha);
 
-        int expected =0;
+        int expected = 0;
         int actual = game.round("Саша", "Маша");
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void firstPlayerNotExistTest() {
         Game game = new Game();
@@ -53,7 +56,7 @@ public class GameTest {
         game.register(sasha);
         game.register(masha);
 
-        int expected =1;
+        int expected = 1;
         int actual = game.round("Саша", "Маша");
 
         Assertions.assertThrows(NewRegisteredException.class,
@@ -62,6 +65,7 @@ public class GameTest {
         );
 
     }
+
     @Test
     public void secondPlayerNotExistTest() {
         Game game = new Game();
@@ -70,7 +74,7 @@ public class GameTest {
         game.register(sasha);
         game.register(masha);
 
-        int expected =2;
+        int expected = 2;
         int actual = game.round("Саша", "Маша");
 
         Assertions.assertThrows(NewRegisteredException.class,
@@ -79,6 +83,7 @@ public class GameTest {
         );
 
     }
+
     @Test
     public void bothPlayersNotExistTest() {
         Game game = new Game();
@@ -87,7 +92,7 @@ public class GameTest {
         game.register(sasha);
         game.register(masha);
 
-        int expected =0;
+        int expected = 0;
         int actual = game.round("Саша", "Маша");
 
         Assertions.assertThrows(NewRegisteredException.class,
